@@ -22,7 +22,6 @@
                 background-color: white;
                 color: black;
             }
-          
         </style>
     </head> 
      <body>
@@ -33,8 +32,9 @@
             <button type="submit">Submit</button>
         </form>
         <?php
+        // Validación del nombre
         if(isset($_POST['nombre'])){
-         $Nombre = trim($_POST['nombre']);
+            $Nombre = trim($_POST['nombre']); // trim quita espacios al inicio/final
             if($Nombre == ""){
                 echo "El nombre no puede estar vacio.<br>";
             } else {
@@ -42,6 +42,7 @@
             }
         }
 
+        // Validación de la edad
         if(isset($_POST["edad"])){
             $Edad = $_POST["edad"];
             if($Edad === ""){
@@ -51,19 +52,15 @@
             }elseif($Edad<0){
                 echo "La edad no puede ser negativa.<br>";
             } else {
+                // Solo llegamos aca si la edad es un numero valido
                 echo "La edad es: ".$Edad."<br>";
-
                 if($Edad >= 18) {
-                    echo"Usted puede votar en las proximas elecciones 2028";
+                    echo "Usted puede votar en las proximas elecciones 2028";
                 }else {
                     echo "Usted no es mayor de edad";
                 }
-             }
             }
-            
-        if (isset($Edad) and $Edad >= 18){
-            echo "Usted puede votar en las proximas elecciones 2028";
-        }else echo "Usted no es mayor de edad";
+        }
         ?>
      </body>
 </html>
