@@ -5,6 +5,21 @@
     <title>Hello World</title>
     <!-- CSS en archivo aparte, dentro de la carpeta css/ -->
     <link rel="stylesheet" href="css/style_P#5.css">
+   <style>
+    body {
+        background-color: black;
+        color: white;
+        font-family: Arial, sans-serif;
+        text-align: center;
+    }
+    h1 {
+        color: rgb(0, 200, 255);
+    }
+
+    p {
+        color: whitesmoke;
+    }
+    </style>
 </head>
 <body>
 <?php
