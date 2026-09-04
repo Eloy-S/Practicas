@@ -9,7 +9,8 @@ En este repositorio se estará documentando y llevando un seguimiento de las pra
 ## Ejecucion
 
 ## Tecnologías
-
+WAMPP, git, github, vscode, 
 ## Control de versiones
 
 ## Autor
+Eloy Samaniego 
