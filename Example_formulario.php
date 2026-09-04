@@ -34,13 +34,33 @@
         </form>
         <?php
         if(isset($_POST['nombre'])){
-        $Nombre = $_POST['nombre'];
-        echo "El nombre es: ".$Nombre."<br>";
+         $Nombre = trim($_POST['nombre']);
+            if($Nombre == ""){
+                echo "El nombre no puede estar vacio.<br>";
+            } else {
+                echo "El nombre es: ". $Nombre . "<br>";
+            }
         }
+
         if(isset($_POST["edad"])){
-        $Edad = $_POST["edad"];
-        echo "La edad es: ".$Edad."<br>";}
-        
+            $Edad = $_POST["edad"];
+            if($Edad === ""){
+                echo "La edad debe ser un numero.<br>";
+            }elseif(!is_numeric($Edad)){
+                echo "La edad debe ser un numero.<br>";
+            }elseif($Edad<0){
+                echo "La edad no puede ser negativa.<br>";
+            } else {
+                echo "La edad es: ".$Edad."<br>";
+
+                if($Edad >= 18) {
+                    echo"Usted puede votar en las proximas elecciones 2028";
+                }else {
+                    echo "Usted no es mayor de edad";
+                }
+             }
+            }
+            
         if (isset($Edad) and $Edad >= 18){
             echo "Usted puede votar en las proximas elecciones 2028";
         }else echo "Usted no es mayor de edad";
